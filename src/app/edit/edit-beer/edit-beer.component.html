@@ -1,0 +1,45 @@
+<div class="well col-md-6 beer-tiles" *ngFor="let beer of beers | async">
+  <p><span class="beer-name">{{beer.name}}</span>: {{beer.description}}</p>
+  <p>Brewed by {{beer.brewery}} ({{beer.location}})</p>
+  <p>Alcohol Percentage: {{beer.alcoholContent}}%</p>
+  <p>IBU: {{beer.ibu}}</p>
+  <p>Half Pint: ${{beer.halfPintPrice}} | Full Pint: ${{beer.pintPrice}}</p>
+  <p class="pintsLeft">Pints left: {{beer.pintsLeft}}</p>
+  <button (click)="editForm.hidden =!editForm.hidden">Edit Beer</button>
+  <button (click)="beginDeletingBeer(beer)">Delete Beer</button>
+  <div #editForm [hidden]=editForm>
+    <div class="form-group">
+      <label for="beer-name">Name:</label>
+      <input #editName>
+    </div>
+    <div class="form-group">
+      <label for="beer-brewery">Brewery:</label>
+      <input #editBrewery>
+    </div>
+    <div class="form-group">
+      <label for="beer-location">Location:</label>
+      <input #editLocation>
+    </div>
+    <div class="form-group">
+      <label for="beer-ibu">IBU:</label>
+      <input #editIBU>
+    </div>
+    <div class="form-group">
+      <label for="beer-alcContent">Alcohol Content:</label>
+      <input #editAlcoholContent>
+    </div>
+    <div class="form-group">
+      <label for="beer-hpprice">Half Pint Price:</label>
+      <input #editHPPrice>
+    </div>
+    <div class="form-group">
+      <label for="beer-pprice">Pint Price:</label>
+      <input #editPPrice>
+    </div>
+    <div class="form-group">
+      <label for="beer-description">Description:</label>
+      <input class="form-control" #editDescription>
+    </div>
+    <button (click)="editButtonClicked(editName.value, editBrewery.value, editLocation.value, editIBU.value, editAlcoholContent.value, editHPPrice.value, editPPrice.value, editDescription.value, beer.$key)">Submit!</button>
+  </div>
+</div>
