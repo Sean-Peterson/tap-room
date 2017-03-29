@@ -26,6 +26,12 @@ beers: FirebaseListObservable<any[]>;
     return beer.pintsLeft - 1;
   }
 
+  beginDeletingBeer(thisBeer) {
+    if (confirm('Are you sure you want to delete this beer from the beers list?')) {
+      this.beerService.deleteBeer(thisBeer);
+    }
+  }
+
   masterBartenderList: Bartender[] = [
     new Bartender('Bob', 'Best Bar', 'Sean Special'),
     new Bartender('Jill', 'Sky Club', 'Almost Summer Pale Ale'),

@@ -16,4 +16,13 @@ export class BeerService {
   addBeer(newBeer: Beer) {
     this.beers.push(newBeer);
   }
+
+  getBeerById(beerId: string) {
+    return this.angularFire.database.object('/beers/' + beerId);
+  }
+
+  deleteBeer(beerToDelete) {
+    var beerInFirebase = this.getBeerById(beerToDelete.$key);
+    beerInFirebase.remove();
+  }
 }
