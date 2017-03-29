@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+li {
+  list-style: none;
+}
+
+.beer-name {
+  font-size: 150%;
+  font-weight: bold;
+}
