@@ -11,6 +11,8 @@ import { PosComponent } from './pos/pos.component';
 import { EditComponent } from './edit/edit.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { NewBeerComponent } from './edit/new-beer/new-beer.component';
+import { BartendersListComponent } from './pos/bartenders-list/bartenders-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +26,10 @@ export const firebaseConfig = {
     AppComponent,
     BeerDisplayComponent,
     PosComponent,
-    EditComponent
+    EditComponent,
+    NewBeerComponent,
+    NewBeerComponent,
+    BartendersListComponent
   ],
   imports: [
     AlertModule.forRoot(),

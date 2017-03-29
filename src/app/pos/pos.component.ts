@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from '../beer.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { BeerService } from '../beer.service';
+import { Bartender } from '../bartender.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -25,6 +26,11 @@ beers: FirebaseListObservable<any[]>;
     return beer.pintsLeft - 1;
   }
 
+  masterBartenderList: Bartender[] = [
+    new Bartender('Bob', 'Best Bar', 'Sean Special'),
+    new Bartender('Jill', 'Sky Club', 'Almost Summer Pale Ale'),
+    new Bartender('Rex', 'Bar 9', 'Hops Galore')
+  ];
 
 
 }

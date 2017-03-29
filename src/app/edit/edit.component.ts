@@ -20,7 +20,6 @@ export class EditComponent implements OnInit {
   submitForm(name: string, brewery: string, location: string, ibu: number, alcoholContent: number, halfPintPrice: number, pintPrice: number, description: string) {
     var newBeer: Beer = new Beer(name, brewery, location, ibu, alcoholContent, halfPintPrice, pintPrice, description);
     this.beerService.addBeer(newBeer);
-    console.log(newBeer);
   }
 
 }
