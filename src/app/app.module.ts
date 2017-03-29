@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
+import { BeerDisplayComponent } from './beer-display/beer-display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BeerDisplayComponent
   ],
   imports: [
     AlertModule.forRoot(),
