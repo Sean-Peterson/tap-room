@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from '../beer.model';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { BeerService } from '../beer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pos',
   templateUrl: './pos.component.html',
-  styleUrls: ['./pos.component.css']
+  styleUrls: ['./pos.component.css'],
+  providers: [BeerService]
 })
+
 export class PosComponent implements OnInit {
 
-  constructor() { }
+constructor(private router: Router, private beerService: BeerService) { }
 
-  ngOnInit() {
+ngOnInit() {
+  this.beers = this.beerService.getBeers();
+}
+
+beers: FirebaseListObservable<any[]>;
+
+  hSale(beer) {
+    return beer.pintsLeft - 1;
   }
+
+
 
 }

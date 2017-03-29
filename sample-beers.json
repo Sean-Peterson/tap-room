@@ -1,5 +1,7 @@
 { "beers": [
   {
+    "empty": false,
+    "pintsLeft": 124,
     "name": "Erica Original",
     "brewery": "Best Beers",
     "location": "San Diego, CA",
@@ -10,6 +12,8 @@
     "description": "A dark, nutty roast with a kick"
     },
   {
+    "empty": false,
+    "pintsLeft": 124,
     "name": "Nerdtastic IPA",
     "brewery": "Epicodus Brews",
     "location": "Portland, OR",
@@ -20,6 +24,8 @@
     "description": "Sweet and bitter hoppy flavor"
     },
   {
+    "empty": false,
+    "pintsLeft": 124,
     "name": "Sean Special",
     "brewery": "Portland Pilsners",
     "location": "Portland, OR",
@@ -30,6 +36,8 @@
     "description": "Light bodied malt profile with a mystery flavor"
     },
   {
+    "empty": false,
+    "pintsLeft": 124,
     "name": "Almost Summer Pale Ale",
     "brewery": "Summer fo eva",
     "location": "Cascade Locks, OR",

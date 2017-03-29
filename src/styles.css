@@ -7,3 +7,7 @@ li {
   font-size: 150%;
   font-weight: bold;
 }
+
+.pintsLeft {
+  float: right;
+}
