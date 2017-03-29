@@ -1,0 +1,42 @@
+{ "beers": [
+  {
+    "name": "Erica Original",
+    "brewery": "Best Beers",
+    "location": "San Diego, CA",
+    "ibu": 15,
+    "alcoholContent": 12,
+    "halfPintPrice": 5,
+    "pintPrice": 7,
+    "description": "A dark, nutty roast with a kick"
+    },
+  {
+    "name": "Nerdtastic IPA",
+    "brewery": "Epicodus Brews",
+    "location": "Portland, OR",
+    "ibu": 80,
+    "alcoholContent": 8,
+    "halfPintPrice": 4,
+    "pintPrice": 6,
+    "description": "Sweet and bitter hoppy flavor"
+    },
+  {
+    "name": "Sean Special",
+    "brewery": "Portland Pilsners",
+    "location": "Portland, OR",
+    "ibu": 20,
+    "alcoholContent": 5.2,
+    "halfPintPrice": 4,
+    "pintPrice": 6,
+    "description": "Light bodied malt profile with a mystery flavor"
+    },
+  {
+    "name": "Almost Summer Pale Ale",
+    "brewery": "Summer fo eva",
+    "location": "Cascade Locks, OR",
+    "ibu": 35,
+    "alcoholContent": 5.5,
+    "halfPintPrice": 4,
+    "pintPrice": 6,
+    "description": "Floral front, hop heavy pale ale for those desiring an early taste of summer"
+    }]
+}

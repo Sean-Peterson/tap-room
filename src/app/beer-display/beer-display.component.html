@@ -1,4 +1,4 @@
-<div class="well" *ngFor="let beer of beers">
+<div class="well" *ngFor="let beer of beers | async">
   <p><span class="beer-name">{{beer.name}}</span>: {{beer.description}}</p>
   <ul>
     <li>Brewed by {{beer.brewery}} ({{beer.location}})</li>
@@ -7,3 +7,4 @@
     <li>Half Pint: ${{beer.halfPintPrice}} | Full Pint: ${{beer.pintPrice}}</li>
   </ul>
 </div>
+<br>
