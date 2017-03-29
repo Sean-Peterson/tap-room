@@ -1,36 +1,38 @@
-<h2>Add a Beer:</h2>
-<div>
-  <div class="form-group">
-    <label for="beer-name">Name:</label>
-    <input #newName>
+<div class="container">
+  <h2>Add a Beer:</h2>
+  <div>
+    <div class="form-group">
+      <label for="beer-name">Name:</label>
+      <input #newName>
+    </div>
+    <div class="form-group">
+      <label for="beer-brewery">Brewery:</label>
+      <input #newBrewery>
+    </div>
+    <div class="form-group">
+      <label for="beer-location">Location:</label>
+      <input #newLocation>
+    </div>
+    <div class="form-group">
+      <label for="beer-ibu">IBU:</label>
+      <input #newIBU>
+    </div>
+    <div class="form-group">
+      <label for="beer-alcContent">Alcohol Content:</label>
+      <input #newAlcoholContent>
+    </div>
+    <div class="form-group">
+      <label for="beer-hpprice">Half Pint Price:</label>
+      <input #newHPPrice>
+    </div>
+    <div class="form-group">
+      <label for="beer-pprice">Pint Price:</label>
+      <input #newPPrice>
+    </div>
+    <div class="form-group">
+      <label for="beer-description">Description:</label>
+      <input class="form-control" #newDescription>
+    </div>
+    <button (click)="submitForm(newName.value, newBrewery.value, newLocation.value, newIBU.value, newAlcoholContent.value, newHPPrice.value, newPPrice.value, newDescription.value)">Submit!</button>
   </div>
-  <div class="form-group">
-    <label for="beer-brewery">Brewery:</label>
-    <input #newBrewery>
-  </div>
-  <div class="form-group">
-    <label for="beer-location">Location:</label>
-    <input #newLocation>
-  </div>
-  <div class="form-group">
-    <label for="beer-ibu">IBU:</label>
-    <input #newIBU>
-  </div>
-  <div class="form-group">
-    <label for="beer-alcContent">Alcohol Content:</label>
-    <input #newAlcoholContent>
-  </div>
-  <div class="form-group">
-    <label for="beer-hpprice">Half Pint Price:</label>
-    <input #newHPPrice>
-  </div>
-  <div class="form-group">
-    <label for="beer-pprice">Pint Price:</label>
-    <input #newPPrice>
-  </div>
-  <div class="form-group">
-    <label for="beer-description">Description:</label>
-    <input class="form-control" #newDescription>
-  </div>
-  <button (click)="submitForm(newName.value, newBrewery.value, newLocation.value, newIBU.value, newAlcoholContent.value, newHPPrice.value, newPPrice.value, newDescription.value)">Submit!</button>
 </div>
