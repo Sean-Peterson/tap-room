@@ -12,4 +12,8 @@ export class BeerService {
   getBeers(){
   return this.beers;
   }
+
+  addBeer(newBeer: Beer) {
+    this.beers.push(newBeer);
+  }
 }
