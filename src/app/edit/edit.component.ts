@@ -17,9 +17,9 @@ export class EditComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, brewery: string, location: string, ibu: number, alcoholContent: number, halfPintPrice: number, pintPrice: number, description: string) {
-    var newBeer: Beer = new Beer(name, brewery, location, ibu, alcoholContent, halfPintPrice, pintPrice, description);
+  submitBeer(newBeer) {
     this.beerService.addBeer(newBeer);
+    console.log(newBeer);
   }
 
 }

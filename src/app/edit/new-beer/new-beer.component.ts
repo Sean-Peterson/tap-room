@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Beer } from '../../beer.model';
 
 @Component({
   selector: 'app-new-beer',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-beer.component.css']
 })
 export class NewBeerComponent implements OnInit {
+  @Output() clickSender = new EventEmitter();
+
+  addButtonClicked(name: string, brewery: string, location: string, ibu: number, alcoholContent: number, halfPintPrice: number, pintPrice: number, description: string) {
+    var newBeer: Beer = new Beer(name, brewery, location, ibu, alcoholContent, halfPintPrice, pintPrice, description);
+    this.clickSender.emit(newBeer);
+  }
 
   constructor() { }
 
