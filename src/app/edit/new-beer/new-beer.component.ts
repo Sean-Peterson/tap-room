@@ -21,6 +21,10 @@ export class NewBeerComponent implements OnInit {
     this.addFormShown = false;
   }
 
+  cancelBeerAdd() {
+    this.addFormShown = false;
+  }
+
   constructor() { }
 
   ngOnInit() {

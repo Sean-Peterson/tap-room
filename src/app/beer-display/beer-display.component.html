@@ -1,8 +1,8 @@
-<div *ngFor="let beer of beers | async">
+<div *ngFor="let beer of beers | async" class="beer-display-loop">
   <div *ngIf="!beer.empty" class="col-md-5 beer-display-wells">
-    <p><span class="beer-name">{{beer.name}}</span>: {{beer.description}}</p>
+    <p class="beer-name-title"><span class="beer-name">{{beer.name}}</span>: <span class="beer-display-brewery">{{beer.brewery}} ({{beer.location}})</span><span id="beer-icon" [class]="iconColor(beer)"><i class="fa fa-beer" aria-hidden="true"></i></span></p>
+    <p>{{beer.description}}</p>
     <ul>
-      <li>Brewed by {{beer.brewery}} ({{beer.location}})</li>
       <li>ABV: {{beer.alcoholContent}}%</li>
       <li>IBU: {{beer.ibu}}</li>
       <li>Half Pint: ${{beer.halfPintPrice}} | Full Pint: ${{beer.pintPrice}}</li>

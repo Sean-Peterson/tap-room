@@ -24,5 +24,14 @@ beers: FirebaseListObservable<any[]>;
     return beer.pintsLeft * 2;
   }
 
+  iconColor(beer) {
+    if (beer.pintsLeft >= 62) {
+      return "success";
+    } else if (beer.pintsLeft >= 24) {
+      return "warning";
+    } else {
+      return "danger";
+    }
+  }
 
 }

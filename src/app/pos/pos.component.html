@@ -1,4 +1,9 @@
-<div class="bartender-display">
+<div class="body-display">
+  <div class="panel-body">
+  <h4>Bartender Recommendations:</h4>
+  <app-bartenders-list [childBartenderList]="masterBartenderList"></app-bartenders-list>
+</div>
+
 <div class="col-md-5 beer-display-wells" *ngFor="let beer of beers | async">
   <p><span class="beer-name">{{beer.name}}</span>: {{beer.description}}</p>
   <ul>
@@ -19,6 +24,4 @@
 <br>
 <div class="row">
 </div>
-<h4>Bartender Recommendations:</h4>
-<app-bartenders-list [childBartenderList]="masterBartenderList"></app-bartenders-list>
 </div>

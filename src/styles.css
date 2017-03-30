@@ -4,10 +4,23 @@
   font-size: 150%;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
+  margin-bottom: 0px;
+}
+
+.beer-display-brewery {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+.beer-name-title {
+  margin-bottom: 0px;
+}
+
+.beer-display-loop {
+  height: 100%;
 }
 
 .beer-display-wells {
-  min-height: 200px;
   background: rgba(240, 236, 235, 0.6);
   border: 2px solid #646168;
   border-radius: 15px;
@@ -17,10 +30,27 @@
   width: 100%;
 }
 
+#beer-icon {
+  font-size: 300%;
+  top: 0;
+  float: right;
+}
+
+.success {
+  color: green;
+}
+.warning {
+  color: yellow;
+}
+.danger {
+  color: red;
+}
+
 .header {
   background-color: rgba(123, 93, 82, 0.8);
   margin-top: 0;
-  height: 60px;
+  padding-top: 10px;
+  height: 70px;
   font-family: 'Playfair Display', serif;
 }
 
@@ -38,7 +68,7 @@
   float: right;
 }
 
-.bartender-display {
+.body-display {
   width: 95%;
 }
 
@@ -46,6 +76,10 @@
 #display-div {
   overflow-y: auto;
   font-family: 'Raleway', sans-serif;
+}
+
+.add-beer {
+  margin-left: 80px;
 }
 
 body {
@@ -64,4 +98,8 @@ body {
 
 li {
   list-style: none;
+}
+
+p {
+  font-size: 16px;
 }
