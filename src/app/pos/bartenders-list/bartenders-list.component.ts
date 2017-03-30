@@ -9,10 +9,19 @@ import { Bartender } from '../../bartender.model';
 })
 export class BartendersListComponent implements OnInit {
   @Input() childBartenderList: Bartender[];
+  filterByWorking: string = "notWorking";
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByWorking = optionFromMenu;
+  }
+
+  toggleWorking(clickedBartender: Bartender, setWorking: boolean) {
+    clickedBartender.working = setWorking;
   }
 
 }

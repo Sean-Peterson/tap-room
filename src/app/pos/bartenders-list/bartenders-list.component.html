@@ -1,3 +1,13 @@
-<span *ngFor="let bartender of childBartenderList">
-  {{bartender.name}} from {{bartender.bar}} recommends {{bartender.favBeer}} |
-</span>
+<select (change)="onChange($event.target.value)">
+  <option value="allBartenders">All Bartenders</option>
+  <option value="working">Bartenders working</option>
+  <option value="notWorking">Bartenders not working</option>
+</select>
+<ul>
+  <li (click)="isWorking(bartender)" *ngFor="let bartender of childBartenderList | working:filterByWorking">
+    {{bartender.name}} from {{bartender.bar}} recommends {{bartender.favBeer}}
+    <input *ngIf="bartender.working === true" type="checkbox" checked (click)="toggleWorking(bartender, false)"/>
+    <input *ngIf="bartender.working === false" type="checkbox" (click)="toggleWorking(bartender, true)"/>
+    <button (click)="editButtonHasBeenClicked(bartender)">Edit!</button>
+  </li>
+</ul>
