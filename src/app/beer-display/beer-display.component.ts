@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from '../beer.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { BeerService } from '../beer.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-beer-display',
@@ -13,7 +12,7 @@ import { Router } from '@angular/router';
 
 export class BeerDisplayComponent implements OnInit {
 
-constructor(private router: Router, private beerService: BeerService) { }
+constructor(private beerService: BeerService) { }
 
 ngOnInit() {
   this.beers = this.beerService.getBeers();

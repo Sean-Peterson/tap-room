@@ -9,6 +9,7 @@ export class BeerService {
   constructor(private angularFire: AngularFire) {
     this.beers = angularFire.database.list('beers');
   }
+
   getBeers(){
   return this.beers;
   }
@@ -20,6 +21,20 @@ export class BeerService {
   getBeerById(beerId: string) {
     return this.angularFire.database.object('/beers/' + beerId);
   }
+
+  updateBeer(localUpdatedBeer){
+    var beerEntryInFirebase = this.getBeerById(localUpdatedBeer.$key);
+    beerEntryInFirebase.update({
+      name: localUpdatedBeer.name,
+      brewery: localUpdatedBeer.brewery,
+      location: localUpdatedBeer.location,
+      ibu: localUpdatedBeer.ibu,
+      alcoholContent: localUpdatedBeer.alcoholContent,
+      halfPintPrice: localUpdatedBeer.halfPintPrice,
+      pintPrice: localUpdatedBeer.pintPrice,
+      description: localUpdatedBeer.description
+    });
+    }
 
   deleteBeer(beerToDelete) {
     var beerInFirebase = this.getBeerById(beerToDelete.$key);

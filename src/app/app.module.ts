@@ -12,6 +12,7 @@ import { EditComponent } from './edit/edit.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { NewBeerComponent } from './edit/new-beer/new-beer.component';
+import { EditBeerComponent } from './edit/edit-beer/edit-beer.component';
 import { BartendersListComponent } from './pos/bartenders-list/bartenders-list.component';
 
 export const firebaseConfig = {
@@ -28,7 +29,7 @@ export const firebaseConfig = {
     PosComponent,
     EditComponent,
     NewBeerComponent,
-    NewBeerComponent,
+    EditBeerComponent,
     BartendersListComponent
   ],
   imports: [
