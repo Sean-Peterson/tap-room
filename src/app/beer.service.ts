@@ -20,16 +20,32 @@ export class BeerService {
 
   halfSale(beer) {
     var beerEntryInFirebase = this.getBeerById(beer.$key);
-    beerEntryInFirebase.update({
-    pintsLeft: beer.pintsLeft - .5;
-    });
+    if (beer.pintsLeft > .5) {
+      beerEntryInFirebase.update({
+        pintsLeft: beer.pintsLeft - .5
+      });
+    } else if (beer.pintsLeft === .5) {
+      beerEntryInFirebase.update({
+        pintsLeft: beer.pintsLeft - .5,
+        empty: true
+      })
+    }
   }
 
   pintSale(beer) {
     var beerEntryInFirebase = this.getBeerById(beer.$key);
-    beerEntryInFirebase.update({
-    pintsLeft: beer.pintsLeft - 1;
-    });
+    if (beer.pintsLeft > 1) {
+      beerEntryInFirebase.update({
+        pintsLeft: beer.pintsLeft - 1
+      });
+    } else if (beer.pintsLeft === 1) {
+      beerEntryInFirebase.update({
+        pintsLeft: beer.pintsLeft - 1,
+        empty: true
+      })
+    } else {
+      alert('Not enough for sale')
+    }
   }
 
   getBeerById(beerId: string) {
