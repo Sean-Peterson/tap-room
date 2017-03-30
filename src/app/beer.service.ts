@@ -66,6 +66,14 @@ export class BeerService {
     });
     }
 
+    restockBeer(localUpdatedBeer){
+      var beerEntryInFirebase = this.getBeerById(localUpdatedBeer.$key);
+      beerEntryInFirebase.update({
+        pintsLeft: 124,
+        empty: false
+      });
+      }
+
   deleteBeer(beerToDelete) {
     var beerInFirebase = this.getBeerById(beerToDelete.$key);
     beerInFirebase.remove();

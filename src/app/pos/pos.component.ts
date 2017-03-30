@@ -30,6 +30,10 @@ beers: FirebaseListObservable<any[]>;
     this.beerService.pintSale(beer);
   }
 
+  beginRestock(beer) {
+    this.beerService.restockBeer(beer);
+  }
+
   beginDeletingBeer(thisBeer) {
     if (confirm('Are you sure you want to delete this beer from the beers list?')) {
       this.beerService.deleteBeer(thisBeer);

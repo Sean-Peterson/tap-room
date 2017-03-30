@@ -13,9 +13,9 @@
     <button (click)="beginPintSale(beer)">Sell a Pint</button>
   </div>
   <div *ngIf="beer.empty">
-    <button>Restock</button>
+    <button (click)="beginRestock(beer)">Restock</button>
   </div>
-
+</div>
 <br>
 <div class="row">
 
