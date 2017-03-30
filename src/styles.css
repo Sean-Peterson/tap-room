@@ -1,19 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
-.beer-name {
-  font-size: 150%;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0px;
+.add-beer {
+  margin-left: 80px;
 }
 
 .beer-display-brewery {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
-}
-
-.beer-name-title {
-  margin-bottom: 0px;
 }
 
 .beer-display-loop {
@@ -30,32 +22,39 @@
   width: 100%;
 }
 
-#beer-icon {
-  font-size: 300%;
-  top: 0;
-  float: right;
+.beer-name {
+  font-size: 150%;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0px;
 }
 
-.success {
-  color: green;
+.beer-name-title {
+  margin-bottom: 0px;
 }
-.warning {
-  color: yellow;
+
+.body-display {
+  width: 95%;
 }
+
 .danger {
-  color: red;
+  color: #9B4738;
 }
 
 .header {
   background-color: rgba(123, 93, 82, 0.8);
   margin-top: 0;
-  padding-top: 10px;
-  height: 70px;
+  padding-top: 1.4%;
+  height: 10vh;
   font-family: 'Playfair Display', serif;
+  color: white;
+  padding-left: 15px;
+  font-size: 60px;
 }
 
 .links {
   float: right;
+  margin-top: 4vh;
 }
 
 .links a{
@@ -64,22 +63,44 @@
 .links a:hover {
   color: red;
 }
+
 .pintsLeft {
   float: right;
 }
 
-.body-display {
-  width: 95%;
+.success {
+  color: #4A6B56;
 }
 
+.warning {
+  color: #B69044;
+}
+
+#beer-icon {
+  font-size: 300%;
+  top: 0;
+  float: right;
+}
 
 #display-div {
   overflow-y: auto;
   font-family: 'Raleway', sans-serif;
 }
 
-.add-beer {
-  margin-left: 80px;
+#logo {
+  color: white;
+  text-decoration: none;
+}
+
+#logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#title-description {
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 body {
