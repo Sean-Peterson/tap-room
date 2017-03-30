@@ -3,6 +3,7 @@
 .beer-name {
   font-size: 150%;
   font-weight: bold;
+  font-family: 'Playfair Display', serif;
 }
 
 .beer-display-wells {
@@ -17,7 +18,10 @@
 }
 
 .header {
-  background-color: gray;
+  background-color: rgba(123, 93, 82, 0.8);
+  margin-top: 0;
+  height: 60px;
+  font-family: 'Playfair Display', serif;
 }
 
 .links {
@@ -41,6 +45,7 @@
 
 #display-div {
   overflow-y: auto;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
