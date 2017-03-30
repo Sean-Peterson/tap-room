@@ -8,6 +8,18 @@ li {
   font-weight: bold;
 }
 
+.beer-display-wells {
+  min-height: 200px;
+  background-color: gray;
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.header {
+  background-color: gray;
+}
+
 .pintsLeft {
   float: right;
 }

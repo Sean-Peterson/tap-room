@@ -23,4 +23,10 @@ export class EditBeerComponent implements OnInit {
     this.beerService.updateBeer(beer);
   }
 
+  beginDeletingBeer(beer) {
+    if (confirm('Are you sure you want to delete this beer?')) {
+      this.beerService.deleteBeer(beer);
+    }
+  }
+
 }

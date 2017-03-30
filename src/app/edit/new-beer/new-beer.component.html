@@ -1,4 +1,6 @@
-<div>
+<button class="btn btn-info" (click)="showAddForm()">Add A New Beer</button>
+<br><br>
+<div *ngIf="addFormShown">
   <div class="form-group">
     <label for="beer-name">Name:</label>
     <input #newName>
@@ -31,5 +33,5 @@
     <label for="beer-description">Description:</label>
     <input class="form-control" #newDescription>
   </div>
-  <button (click)="addButtonClicked(newName.value, newBrewery.value, newLocation.value, newIBU.value, newAlcoholContent.value, newHPPrice.value, newPPrice.value, newDescription.value)">Submit!</button>
+  <button (click)="addButtonClicked(newName.value, newBrewery.value, newLocation.value, newIBU.value, newAlcoholContent.value, newHPPrice.value, newPPrice.value, newDescription.value)" class="btn btn-success">Submit!</button>
 </div>
