@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-li {
-  list-style: none;
-}
 
 .beer-name {
   font-size: 150%;
@@ -10,16 +7,56 @@ li {
 
 .beer-display-wells {
   min-height: 200px;
-  background-color: gray;
-  border: 3px solid white;
+  background: rgba(240, 236, 235, 0.6);
+  border: 2px solid #646168;
   border-radius: 15px;
   padding: 5px;
+  margin: 10px;
+  margin-left: 80px;
+  width: 100%;
 }
 
 .header {
   background-color: gray;
 }
 
+.links {
+  float: right;
+}
+
+.links a{
+  color: white;
+}
+.links a:hover {
+  color: red;
+}
 .pintsLeft {
   float: right;
+}
+
+.bartender-display {
+  width: 95%;
+}
+
+
+#display-div {
+  overflow-y: auto;
+}
+
+body {
+  background: url('whitewood.jpg');
+  background-color: red;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
 }

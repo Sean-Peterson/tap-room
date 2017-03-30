@@ -1,4 +1,4 @@
-<div class="col-md-6 beer-display-wells" *ngFor="let beer of beers | async">
+<div class="col-md-5 beer-display-wells" *ngFor="let beer of beers | async">
   <p><span class="beer-name">{{beer.name}}</span>: {{beer.description}}</p>
   <p>Brewed by {{beer.brewery}} ({{beer.location}})</p>
   <p>Alcohol Percentage: {{beer.alcoholContent}}%</p>
