@@ -18,6 +18,20 @@ export class BeerService {
     this.beers.push(newBeer);
   }
 
+  halfSale(beer) {
+    var beerEntryInFirebase = this.getBeerById(beer.$key);
+    beerEntryInFirebase.update({
+    pintsLeft: beer.pintsLeft - .5;
+    });
+  }
+
+  pintSale(beer) {
+    var beerEntryInFirebase = this.getBeerById(beer.$key);
+    beerEntryInFirebase.update({
+    pintsLeft: beer.pintsLeft - 1;
+    });
+  }
+
   getBeerById(beerId: string) {
     return this.angularFire.database.object('/beers/' + beerId);
   }

@@ -22,8 +22,12 @@ ngOnInit() {
 
 beers: FirebaseListObservable<any[]>;
 
-  hSale(beer) {
-    return beer.pintsLeft - 1;
+  beginHalfSale(beer) {
+    this.beerService.halfSale(beer);
+  }
+
+  beginPintSale(beer) {
+    this.beerService.pintSale(beer);
   }
 
   beginDeletingBeer(thisBeer) {
