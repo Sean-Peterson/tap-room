@@ -47,6 +47,15 @@ ng serve
 **Step 5**: Visit the app at [http://localhost:4200](http://localhost:4200).
 
 
+## Technologies Used
+  * **HTML**: Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.
+  * **CSS**: The Cascading Style Sheets Specification is a computer language that is used to write formatting instructions.
+  * **JavaScipt**: An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+  * **Angular2**: Angular2 is a JavaScript framework for creating web applications.
+  * **Typescript**: Typescript is a free and open-source programming language developed and maintained by Microsoft. It is a strict superset of JavaScript, and adds optional static typing and class-based object-oriented programming to the language.
+  * **npm**: A NodeJS package manager. You can use it to install node programs. Also, if you use it in development, it makes it easier to specify and link dependencies.
+
+
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
